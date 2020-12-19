@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.bean.BeanUser;
+import com.example.demo.Bean.BeanUser;
 
 import com.example.demo.mapper.UserMapper;
 
@@ -26,12 +26,27 @@ public class ControllerBean {
     @RequestMapping("/get/{id}")
 
     public BeanUser getBeanUser(@PathVariable("id") Integer id){
-        System.out.println(id);
-        System.out.println(beanUserMapper.selectId(id));
 
         return beanUserMapper.selectId(id);
 
     }
+    @RequestMapping("/get/name/{user_name}")
+    public BeanUser getBeanUser(@PathVariable("user_name") String name){
+
+
+        return beanUserMapper.selectName(name);
+
+    }
+
+    @RequestMapping("/get/password/{user_name,pass_word}")
+    public BeanUser getBeauser(@PathVariable("user_name") String name, @PathVariable("pass_word") String password){
+
+
+        return beanUserMapper.verify(name, password);
+
+    }
+
+
     //插入
 
     @RequestMapping("/insert")
@@ -67,7 +82,6 @@ public class ControllerBean {
     }
 
     public static void main(String[]  args){
-        ControllerBean a = new ControllerBean();
-        a.getBeanUser(1);
+
     }
 }

@@ -1,5 +1,8 @@
 package com.example.demo;
 
+/*
+ * No using for this project! just for practicing the database manipulate!
+ */
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
