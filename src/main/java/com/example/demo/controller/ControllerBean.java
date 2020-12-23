@@ -39,7 +39,7 @@ public class ControllerBean {
     }
 
     @RequestMapping("/get/password/{user_name,pass_word}")
-    public BeanUser getBeauser(@PathVariable("user_name") String name, @PathVariable("pass_word") String password){
+    public BeanUser getBeanuser(@PathVariable("user_name") String name, @PathVariable("pass_word") String password){
 
 
         return beanUserMapper.verify(name, password);
