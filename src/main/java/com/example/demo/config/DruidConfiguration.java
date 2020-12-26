@@ -18,7 +18,8 @@ public class DruidConfiguration {
     public ServletRegistrationBean<StatViewServlet> DruidStatViewServlet(){
 
         //org.springframework.boot.context.embedded.ServletRegistrationBean提供类的进行注册.
-        ServletRegistrationBean<StatViewServlet> servletRegistrationBean = new ServletRegistrationBean<>(new StatViewServlet(),"/druid/*");
+        ServletRegistrationBean<StatViewServlet> servletRegistrationBean;
+        servletRegistrationBean = new ServletRegistrationBean<>(new StatViewServlet(),"/druid/*");
 
         //添加初始化参数：initParams
 
