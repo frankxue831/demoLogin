@@ -1,26 +1,27 @@
 package com.example.demo;
 
 /**
+ * No using for this project! just for practicing the database manipulate!
  * user的service
  */
 public interface IUserService {
     /**
      *
-     * @param name
-     * @param passwords
-     * @param email
+     * @param name the name of the client
+     * @param passwords the password of the client
+     * @param email the email of the client
      */
     int create(String name, String passwords, String email);
 
     /**
      * 根据用户名删除用户
-     * @param name
+     * @param name the name of the client
      */
     void deleteByName(String name);
 
     /**
      * 获取用户总数
-     * @return
+     * @return the users number
      */
     Integer getUsersCount();
 
