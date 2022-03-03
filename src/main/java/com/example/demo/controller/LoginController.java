@@ -39,6 +39,7 @@ public class LoginController {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         map.put(username, password);
+        request.getSession().setAttribute("name", request);
         //System.out.println(map.toString());
 
         //Not allow failed sign in more than 3 times

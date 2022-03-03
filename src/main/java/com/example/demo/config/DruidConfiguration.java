@@ -21,7 +21,7 @@ public class DruidConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(DruidConfiguration.class);
 
-    private static final String DB_PREFIX = "spring.datasource";
+    private static final String DB_PREFIX = "spring.datasource.druid";
 
     /**
      * 注册一个StatViewServlet
@@ -269,3 +269,6 @@ public class DruidConfiguration {
     }
 
 }
+
+
+

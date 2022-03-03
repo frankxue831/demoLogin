@@ -1,5 +1,7 @@
 package com.example.demo.Bean;
 
+import java.io.Serializable;
+
 public class BeanUser {
 
     private Integer id;
